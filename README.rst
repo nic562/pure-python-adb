@@ -1,3 +1,7 @@
+Fork from Swind's pure-python-adb
+=========================================================
+see `Swind/pure-python-adb`_
+
 The package name has been renamed from 'adb' to 'ppadb'
 =========================================================
 
@@ -327,3 +331,4 @@ ADB documents
 .. _services: https://android.googlesource.com/platform/system/core/+/master/adb/SERVICES.TXT
 .. _sync: https://android.googlesource.com/platform/system/core/+/master/adb/SYNC.TXT
 .. _`google/python-adb`: https://github.com/google/python-adb
+.. _`Swind/pure-python-adb`: https://github.com/Swind/pure-python-adb

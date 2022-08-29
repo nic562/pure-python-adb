@@ -10,3 +10,5 @@ dist
 venv
 test_result.xml
 .python-version
+dist/
+build/

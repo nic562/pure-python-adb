@@ -5,6 +5,8 @@
 
 from setuptools import setup, find_packages
 
+from ppadb import __version__
+
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
@@ -21,12 +23,14 @@ classifiers = [
 
 setup(
     name='pure-python-adb',
-    version="0.3.0-dev",
+    version=__version__,
     description='Pure python implementation of the adb client',
     long_description=readme + '\n\n' + history,
     author='Swind Ou',
     author_email='swind@cloudmosa.com',
-    url="https://github.com/Swind/pure-python-adb",
+    maintainer='Nicholas Chen',
+    maintainer_email='nic562@gmail.com',
+    url="https://github.com/nic562/pure-python-adb",
     license='MIT license',
     packages=find_packages(exclude=["*.test", "*.test.*", "test.*", "test"]),
     install_requires=[],

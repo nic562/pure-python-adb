@@ -16,18 +16,20 @@ class Transport(Command):
 
         return connection
 
-    def shell(self, cmd, handler=None, timeout=None):
+    def shell(self, cmd, handler=None, timeout=None, decode='utf-8'):
         conn = self.create_connection(timeout=timeout)
 
         cmd = "shell:{}".format(cmd)
         conn.send(cmd)
 
         if handler:
-            handler(conn)
+            return handler(conn)
         else:
             result = conn.read_all()
             conn.close()
-            return result.decode('utf-8')
+            if decode:
+                return result.decode(decode)
+            return result
 
     def sync(self):
         conn = self.create_connection()
